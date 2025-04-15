@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Github } from 'lucide-react';
 
@@ -12,10 +11,10 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-1">
             <div className="text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
-              CompanyName
+              Besouye Samyar Safar
             </div>
             <p className="text-foreground/70 mb-4">
-              Creating beautiful digital experiences that drive growth and engagement.
+              Creating unforgettable travel experiences that inspire and delight.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
@@ -75,10 +74,10 @@ const Footer = () => {
         
         <div className="border-t mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-foreground/60 text-sm">
-            &copy; {currentYear} CompanyName. All rights reserved.
+            &copy; {currentYear} Besouye Samyar Safar. All rights reserved.
           </p>
           <p className="text-foreground/60 text-sm mt-4 md:mt-0">
-            Designed with ❤️ for exceptional experiences
+            Designed with ❤️ for exceptional travel experiences
           </p>
         </div>
       </div>
