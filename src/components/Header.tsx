@@ -13,10 +13,10 @@ const Header = () => {
   };
 
   const navItems = [
-    { name: 'Hotels', path: '/services/hotel' },
-    { name: 'Events', path: '/services/events' },
-    { name: 'Supplementary', path: '/services/supplementary' },
-    { name: 'VIP International', path: '/services/vip' },
+    { name: 'هتل‌ها', path: '/services/hotel' },
+    { name: 'رویدادها', path: '/services/events' },
+    { name: 'خدمات تکمیلی', path: '/services/supplementary' },
+    { name: 'وی‌آی‌پی بین‌الملل', path: '/services/vip' },
   ];
 
   return (
@@ -27,13 +27,13 @@ const Header = () => {
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
               <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
-                Besouye Samyar Safar
+                بسوی سمیع سفر
               </span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-reverse space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -47,7 +47,7 @@ const Header = () => {
 
           {/* CTA Button (Desktop) */}
           <div className="hidden md:flex">
-            <Button size="sm">Contact Us</Button>
+            <Button size="sm">تماس با ما</Button>
           </div>
 
           {/* Mobile menu button */}
@@ -58,7 +58,7 @@ const Header = () => {
               onClick={toggleMenu}
               aria-expanded={isMenuOpen}
             >
-              <span className="sr-only">Open main menu</span>
+              <span className="sr-only">باز کردن منو</span>
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -68,21 +68,21 @@ const Header = () => {
       {/* Mobile Navigation */}
       <div className={cn(
         "md:hidden fixed inset-0 bg-background z-40 transform transition-transform duration-300 ease-in-out pt-16",
-        isMenuOpen ? "translate-x-0" : "translate-x-full"
+        isMenuOpen ? "translate-x-0" : "-translate-x-full"
       )}>
         <div className="flex flex-col space-y-4 px-4 pt-6 pb-6">
           {navItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}
-              className="py-2 text-foreground/80 hover:text-primary transition-colors"
+              className="py-2 text-foreground/80 hover:text-primary transition-colors text-right"
               onClick={() => setIsMenuOpen(false)}
             >
               {item.name}
             </Link>
           ))}
           <Button className="mt-4 w-full" onClick={() => setIsMenuOpen(false)}>
-            Contact Us
+            تماس با ما
           </Button>
         </div>
       </div>
@@ -91,4 +91,3 @@ const Header = () => {
 };
 
 export default Header;
-
