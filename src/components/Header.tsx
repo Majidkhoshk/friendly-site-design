@@ -27,7 +27,7 @@ const Header = () => {
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
               <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
-                بسوی سمیع سفر
+                بسوی سامیار سفر
               </span>
             </Link>
           </div>
